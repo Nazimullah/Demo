@@ -30,7 +30,7 @@ namespace Nazim.Api.Automation.Utilities
         /// <typeparam name="T"></typeparam>
         /// <param name="apiUrl"></param>
         /// <returns></returns>
-        public static IList<T> GetResponseForVpodAndPcfServices<T>(string apiUrl)
+        public static IList<T> GetResponseForAPIServices<T>(string apiUrl)
         {
             try
             {

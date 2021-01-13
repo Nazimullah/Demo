@@ -22,10 +22,10 @@ namespace Nazim.Automation.Tests
         }
 
         [TestMethod]
-        [DataRow("Indian")] //CustomAttribute
-        public void TC_No_UI_Test(string nationality)
+        [DataRow("Indian", "https://www.google.com/")] //CustomAttribute
+        public void TC_No_UI_Test(string nationality, string appUrl)
         {
-            var (isVisible, output) = _googleWorkflow.ValidateGooglePage();
+            var (isVisible, output) = _googleWorkflow.ValidateGooglePage(nationality, appUrl);
             Assert.IsTrue(isVisible == true && output == "Testing", "Something went wrong. ");
         }
 

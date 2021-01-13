@@ -11,6 +11,12 @@ namespace DriversCSAT.UI.Automation.Utilities
 {
     public class WebDriver
     {
+
+        public static IWebDriver SetupWebdriver()
+        {
+            return new ChromeDriver(AppDomain.CurrentDomain.BaseDirectory+"Drivers");
+        }
+
         public static IWebDriver SetupWebdriver(string browserName, string env, string operatingSystem,
             string buldName, string vrsion, string testCaseName, bool localRun)
         {
